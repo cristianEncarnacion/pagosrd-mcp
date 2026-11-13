@@ -1,0 +1,50 @@
+{
+  "name": "@pagosrd/mcp",
+  "version": "0.1.1",
+  "description": "Servidor MCP de PagosRD: crea links de cobro, consulta pagos y reembolsa desde Claude u otros clientes MCP.",
+  "license": "MIT",
+  "author": "Cristian Encarnación",
+  "homepage": "https://github.com/cristianEncarnacion/pagosrd-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianEncarnacion/pagosrd-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cristianEncarnacion/pagosrd-mcp/issues"
+  },
+  "keywords": [
+    "pagosrd",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "pagos",
+    "republica-dominicana"
+  ],
+  "type": "module",
+  "bin": {
+    "pagosrd-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@pagosrd/node": "^0.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  }
+}
